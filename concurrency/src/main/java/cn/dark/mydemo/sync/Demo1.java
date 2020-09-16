@@ -9,14 +9,14 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class Demo1 {
 
-    private boolean running = true;
+    private volatile boolean running = true;
 
     public void exec() {
-        log.debug("start");
+        log.info("start");
         while (running) {
-
         }
-        log.error("end");
+
+        log.info("end");
     }
 
     public static void main(String[] args) throws InterruptedException {
