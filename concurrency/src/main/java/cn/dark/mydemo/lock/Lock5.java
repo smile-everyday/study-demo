@@ -62,6 +62,10 @@ public class Lock5 {
         }, "t2").start();
     }
 
+    /**
+     * 读读共享、读写互斥
+     *
+     */
     private static void test1() throws InterruptedException {
         new Thread(() -> {
             r.lock();
@@ -104,6 +108,10 @@ public class Lock5 {
 
     }
 
+    /**
+     * 两个读锁之间加了一个写锁，这种情况下两个读写无法共享
+     *
+     */
     private static void test2() throws InterruptedException {
         new Thread(() -> {
             r.lock();

@@ -22,8 +22,8 @@ public class Lock2 {
 
     public static void main(String[] args) {
         // rr();
-        // rw();
-        ww();
+        rw();
+        // ww();
     }
 
     private static void rr() {
