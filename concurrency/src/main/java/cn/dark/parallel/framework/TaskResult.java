@@ -28,7 +28,7 @@ public class TaskResult<T> {
         return msg;
     }
 
-    public static enum ResultEnum{
+    public enum ResultEnum {
         SUCCESS, FAIL, EXCEPTION;
     }
 
