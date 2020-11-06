@@ -32,4 +32,12 @@ public class TaskResult<T> {
         SUCCESS, FAIL, EXCEPTION;
     }
 
+    @Override
+    public String toString() {
+        return "TaskResult{" +
+                "resultType=" + resultType +
+                ", result=" + result +
+                ", msg='" + msg + '\'' +
+                '}';
+    }
 }

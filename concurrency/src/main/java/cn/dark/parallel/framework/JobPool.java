@@ -13,7 +13,7 @@ public class JobPool {
     private static final Integer THREAD_COUNT = Runtime.getRuntime().availableProcessors() + 1;
     private static BlockingQueue<Runnable> taskQueue = new ArrayBlockingQueue<>(5000);
     private static ExecutorService taskExecutor = new ThreadPoolExecutor(THREAD_COUNT, THREAD_COUNT, 60, TimeUnit.SECONDS, taskQueue);
-    private static Map<String, JobInfo> jobCache = new ConcurrentHashMap<>();
+    private static Map<String, JobInfo<?>> jobCache = new ConcurrentHashMap<>();
 
     private JobPool() {}
 
@@ -25,7 +25,7 @@ public class JobPool {
         return JobPoolHolder.jobPool;
     }
 
-    public Map<String, JobInfo> getJobCache() {
+    public static Map<String, JobInfo<?>> getJobCache() {
         return jobCache;
     }
 
@@ -89,7 +89,7 @@ public class JobPool {
         return info.getTaskProgress();
     }
 
-    private <R> JobInfo<R> getJob(String jobName) {
+    public <R> JobInfo<R> getJob(String jobName) {
         JobInfo jobInfo = jobCache.get(jobName);
         if (jobInfo == null) {
             throw new RuntimeException("任务【" + jobName + "】不存在");

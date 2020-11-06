@@ -1,5 +1,7 @@
 package cn.dark.parallel.framework;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.LinkedBlockingDeque;
@@ -9,6 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author dark
  * @date 2020-11-05
  */
+@Slf4j
 public class JobInfo<R> {
 
     private String name;
@@ -57,16 +60,20 @@ public class JobInfo<R> {
     }
 
     public String getTaskProgress() {
-        return "任务总数：" + jobLength + "，已处理：" + getTaskProcessCount() + "，处理成功：" + getSuccessCount();
+        return "任务总数：" + jobLength + "，已处理：" + getTaskProcessCount() + "，处理成功：" + getSuccessCount() + "，处理失败：" + getFailCount();
     }
 
     public void addResult(TaskResult<R> result) {
-        taskProcessCount.incrementAndGet();
         if (result.getResultType() == TaskResult.ResultEnum.SUCCESS) {
             successCount.incrementAndGet();
         }
 
+        int i = taskProcessCount.incrementAndGet();
         taskResults.addLast(result);
-        // todo 检查线程
+
+        if (taskProcessCount.get() == jobLength) {
+            JobExpireChecker checker = JobExpireChecker.getInstance();
+            checker.putJob(this.name, this.expireTime);
+        }
     }
 }
