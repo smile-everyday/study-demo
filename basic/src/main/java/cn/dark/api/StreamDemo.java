@@ -1,4 +1,4 @@
-package cn.dark.serializable.api;
+package cn.dark.api;
 
 import java.util.*;
 import java.util.stream.Collectors;
