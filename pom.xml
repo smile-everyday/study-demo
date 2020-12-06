@@ -13,6 +13,7 @@
         <module>algorithm</module>
         <module>design-mode</module>
         <module>basic</module>
+        <module>network</module>
     </modules>
 
 

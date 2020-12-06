@@ -4,7 +4,7 @@ import cn.dark.entity.L;
 import cn.dark.util.CASLock;
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j(topic = "enjoy")
+@Slf4j
 public class Test1 {
 
 
