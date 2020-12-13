@@ -47,14 +47,14 @@ public class JobPool {
             try {
                 result = iTaskProcessor.execute(data);
                 if (result == null) {
-                    result = new TaskResult<>(TaskResult.ResultEnum.EXCEPTION, r, "result is null");
+                    result = new TaskResult<>(TaskResult.ResultEnum.FAIL, r, "result is null");
                 }
 
                 if (result.getResultType() == null) {
                     if (result.getMsg() == null) {
-                        result = new TaskResult<>(TaskResult.ResultEnum.EXCEPTION, r, "result is null");
+                        result = new TaskResult<>(TaskResult.ResultEnum.FAIL, r, "result is null");
                     } else {
-                        result = new TaskResult<>(TaskResult.ResultEnum.EXCEPTION, r, "result is null, reason: " + result.getMsg());
+                        result = new TaskResult<>(TaskResult.ResultEnum.FAIL, r, "result is null, reason: " + result.getMsg());
                     }
                 }
             } catch (Exception e) {

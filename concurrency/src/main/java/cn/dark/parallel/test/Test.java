@@ -34,7 +34,7 @@ public class Test {
                     log.info("任务结果：{}", taskResults);
                 }
 
-                JobInfo<Integer> jobInfo = jobPool.getJob(JOB_NAME);
+                JobInfo jobInfo = jobPool.getJob(JOB_NAME);
                 if (jobInfo.getTaskProcessCount() == JOB_LENGTH) {
                     break;
                 }
