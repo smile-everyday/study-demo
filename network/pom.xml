@@ -15,6 +15,7 @@
         <module>io</module>
         <module>netty-basic</module>
         <module>netty-http</module>
+        <module>udp</module>
     </modules>
 
     <dependencies>
