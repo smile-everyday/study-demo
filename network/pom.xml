@@ -16,6 +16,7 @@
         <module>netty-basic</module>
         <module>netty-http</module>
         <module>udp</module>
+        <module>netty-adv</module>
     </modules>
 
     <dependencies>
