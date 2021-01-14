@@ -19,7 +19,7 @@ public class KryoSerializer {
 
     private static Kryo kryo = KryoFactory.createKryo();
 
-    public void serialize(Object object, ByteBuf out) {
+    public static void serialize(Object object, ByteBuf out) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         Output output = new Output(baos);
         kryo.writeClassAndObject(output, object);
@@ -36,12 +36,12 @@ public class KryoSerializer {
         out.writeBytes(bytes);
     }
 
-    public Object deserialize(ByteBuf out) {
-        if (out == null) {
+    public static Object deserialize(ByteBuf in) {
+        if (in == null) {
             return null;
         }
 
-        Input input = new Input(new ByteBufInputStream(out));
+        Input input = new Input(new ByteBufInputStream(in));
         return kryo.readClassAndObject(input);
     }
 
