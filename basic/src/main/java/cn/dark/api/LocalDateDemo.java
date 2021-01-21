@@ -16,6 +16,8 @@ public class LocalDateDemo {
         // zonedDate();
 
         // caclArriveTime();
+
+        System.out.println("2021-01-13".compareTo("2021-02"));
     }
 
     private static void caclArriveTime() {
