@@ -3,6 +3,7 @@ package cn.dark.api;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAdjusters;
+import java.util.List;
 
 /**
  * @author lwj
@@ -17,7 +18,11 @@ public class LocalDateDemo {
 
         // caclArriveTime();
 
-        System.out.println("2021-01-13".compareTo("2021-02"));
+        // System.out.println("2021-01-13".compareTo("2021-02"));
+        // List<String> list = null;
+        // for (String s : list) {
+        //     System.out.println(s);
+        // }
     }
 
     private static void caclArriveTime() {
