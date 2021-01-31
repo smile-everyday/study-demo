@@ -8,6 +8,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.core.BridgeMethodResolver;
 import org.springframework.core.ResolvableType;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
+import org.springframework.expression.ExpressionParser;
+import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.ReflectionUtils;
 
@@ -95,5 +97,10 @@ public class ToolsTest {
         System.out.println(s.getSuperType());
         System.out.println(s.getRawClass());
         System.out.println();
+    }
+
+    @Test
+    public void spel() {
+        ExpressionParser expression = new SpelExpressionParser();
     }
 }
