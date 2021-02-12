@@ -16,6 +16,7 @@
         <module>network</module>
         <module>spring-demo</module>
         <module>netty-adv</module>
+        <module>es-springboot</module>
     </modules>
 
 
