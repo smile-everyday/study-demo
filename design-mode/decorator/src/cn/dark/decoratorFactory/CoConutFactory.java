@@ -1,4 +1,4 @@
-package cn.dark.factory;
+package cn.dark.decoratorFactory;
 
 import cn.dark.decorator.Beverage;
 import cn.dark.decorator.concretedecorator.Coconut;
