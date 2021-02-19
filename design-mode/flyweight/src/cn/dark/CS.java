@@ -13,6 +13,7 @@ public class CS {
 
     public static void main(String[] args) throws Exception {
         for (int i = 0; i < 10; i++) {
+            // 角色类型属于内部状态，是可共享的，武器类型属于外部状态，会变化的
             AbstractPlayer player = PlayerFactory.getPlayer(getPlayer(i));
             player.assignWeapon(getWeapon(i));
 

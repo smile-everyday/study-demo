@@ -1,13 +1,13 @@
-package cn.dark;
+package cn.dark.bridge;
 
-import cn.dark.abstraction.BigWrittingBrush;
-import cn.dark.abstraction.MediumWrittingBrush;
-import cn.dark.abstraction.SmallWrittingBrush;
-import cn.dark.abstraction.WrittingBrush;
-import cn.dark.implementor.Black;
-import cn.dark.implementor.Color;
-import cn.dark.implementor.Green;
-import cn.dark.implementor.Red;
+import cn.dark.bridge.abstraction.BigWrittingBrush;
+import cn.dark.bridge.abstraction.MediumWrittingBrush;
+import cn.dark.bridge.abstraction.SmallWrittingBrush;
+import cn.dark.bridge.abstraction.WrittingBrush;
+import cn.dark.bridge.implementor.Black;
+import cn.dark.bridge.implementor.Color;
+import cn.dark.bridge.implementor.Green;
+import cn.dark.bridge.implementor.Red;
 
 /**
  * @author dark

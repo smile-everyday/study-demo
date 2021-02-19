@@ -1,4 +1,4 @@
-package cn.dark.abstraction;
+package cn.dark.bridge.abstraction;
 
 /**
  * @author dark

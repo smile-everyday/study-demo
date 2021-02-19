@@ -1,4 +1,4 @@
-package cn.dark;
+package cn.dark.chain;
 
 /**
  * @author dark

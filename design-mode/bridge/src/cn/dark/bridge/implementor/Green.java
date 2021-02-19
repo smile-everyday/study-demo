@@ -1,4 +1,4 @@
-package cn.dark.implementor;
+package cn.dark.bridge.implementor;
 
 /**
  * @author dark

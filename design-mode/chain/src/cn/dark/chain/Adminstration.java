@@ -1,8 +1,5 @@
 package cn.dark.chain;
 
-import cn.dark.Level;
-import cn.dark.Request;
-
 /**
  * @author dark
  * @date 2019-02-11

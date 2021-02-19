@@ -26,6 +26,7 @@ public class PlayerFactory {
                 default:
                     throw new Exception("无此类型的玩家！");
             }
+            pool.put(type, player);
         }
         return player;
     }

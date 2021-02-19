@@ -1,6 +1,6 @@
-package cn.dark.abstraction;
+package cn.dark.bridge.abstraction;
 
-import cn.dark.implementor.Color;
+import cn.dark.bridge.implementor.Color;
 
 /**
  * @author dark
