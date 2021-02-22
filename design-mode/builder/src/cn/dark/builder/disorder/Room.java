@@ -1,4 +1,4 @@
-package cn.dark.disorder;
+package cn.dark.builder.disorder;
 
 /**
  * @author dark

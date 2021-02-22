@@ -1,4 +1,6 @@
-package cn.dark;
+package cn.dark.state;
+
+import cn.dark.Character;
 
 /**
  * @author dark

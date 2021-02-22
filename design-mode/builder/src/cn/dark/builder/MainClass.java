@@ -1,9 +1,6 @@
-package cn.dark;
+package cn.dark.builder;
 
-import cn.dark.disorder.Room;
-import cn.dark.ordered.Builder;
-import cn.dark.ordered.Designer;
-import cn.dark.ordered.RoomBuilder;
+import cn.dark.builder.disorder.Room;
 
 /**
  * @author dark

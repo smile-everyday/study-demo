@@ -1,5 +1,6 @@
-package cn.dark;
+package cn.dark.visitor;
 
+import cn.dark.ObjectStructure;
 import cn.dark.element.Components;
 import cn.dark.visitor.BenzModifiedVisitor;
 import cn.dark.visitor.BugattiModifiedVisitor;

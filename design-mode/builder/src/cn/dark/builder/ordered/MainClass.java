@@ -1,4 +1,4 @@
-package cn.dark.ordered;
+package cn.dark.builder.ordered;
 
 /**
  * @author dark
