@@ -17,6 +17,7 @@
         <module>spring-demo</module>
         <module>netty-adv</module>
         <module>es-springboot</module>
+        <module>mq</module>
     </modules>
 
 
