@@ -1,5 +1,6 @@
 package cn.dark.basic.producer;
 
+import cn.dark.Constant;
 import org.apache.rocketmq.client.exception.MQBrokerException;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
@@ -14,12 +15,12 @@ import org.apache.rocketmq.remoting.exception.RemotingException;
 public class SyncPorducer {
 
     public static void main(String[] args) throws MQClientException, RemotingException, InterruptedException, MQBrokerException {
-        DefaultMQProducer producer = new DefaultMQProducer("producer_group");
-        producer.setNamesrvAddr("192.168.0.179:9876");
+        DefaultMQProducer producer = new DefaultMQProducer(Constant.PRODUCER_GROUP);
+        producer.setNamesrvAddr(Constant.NAMESRV_ADDR);
         producer.start();
 
-        // 默认是同步发送
-        Message message = new Message("ROCKET_TEST", "Hello rocketMQ".getBytes());
+        // 默认是同步发送，如果需要可靠性保证，业务端需要自己实现
+        Message message = new Message(Constant.TOPIC, "Hello rocketMQ".getBytes());
         SendResult result = producer.send(message);
         System.out.println(result.toString());
 
