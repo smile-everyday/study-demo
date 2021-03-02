@@ -6,7 +6,7 @@ package cn.dark;
  */
 public interface Constant {
 
-    String NAMESRV_ADDR = "192.168.43.8:9876";
+    String NAMESRV_ADDR = "192.168.0.179:9876";
 
     String TOPIC = "TopicTest";
 
