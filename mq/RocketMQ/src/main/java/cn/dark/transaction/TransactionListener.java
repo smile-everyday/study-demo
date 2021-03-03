@@ -39,7 +39,7 @@ public class TransactionListener implements org.apache.rocketmq.client.producer.
     }
 
     /**
-     * 该方法用于RocketMQ与业务确认未提交事务的消息的状态（默认一分钟执行一次，执行5次）
+     * 该方法用于RocketMQ与业务确认未提交事务的消息的状态（默认一分钟执行一次，单条消息检查15次）
      */
     @Override
     public LocalTransactionState checkLocalTransaction(MessageExt msg) {
