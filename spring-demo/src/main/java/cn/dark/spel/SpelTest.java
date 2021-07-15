@@ -48,6 +48,9 @@ public class SpelTest {
 
         String value4 = ElParser.getKeyByParameter("#students[1].name", paramNames, args);
         System.out.println(value4);
+
+        String value5 = ElParser.getKeyByParameter("#student.hashCode() + '_' + #student.name", paramNames, args);
+        System.out.println(value5);
     }
 
 }
